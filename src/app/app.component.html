@@ -1,21 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<header>
+  <div class="profile-page sidebar-collapse">
+    <app-navbar></app-navbar>
+  </div>
+</header>
+<div class="page-content">
+  <div>
+    <div class="profile-page">
+      <div class="wrapper">
+        <div class="page-header page-header-small" filter-color="green">
+          <div class="page-header-image" data-parallax="true"
+            style="background-image: url('assets/images/cc-bg-1.jpg');"></div>
+          <div class="container">
+            <div class="content-center">
+              <div class="cc-profile-image"><a href="#"><img src="assets/images/anthony.jpg" alt="Image" /></a></div>
+              <div class="h2 title">Anthony Barnett</div>
+              <p class="category text-white">Web Developer, Graphic Designer, Photographer</p><a
+                class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
+                data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="#" data-aos="zoom-in"
+                data-aos-anchor="data-aos-anchor">Download CV</a>
+            </div>
+          </div>
+          <div class="section">
+            <div class="container">
+              <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
+                  title="Follow me on Facebook"><i class="fa fa-facebook"></i></a><a
+                  class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
+                  title="Follow me on Twitter"><i class="fa fa-twitter"></i></a><a
+                  class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
+                  title="Follow me on Google+"><i class="fa fa-google-plus"></i></a><a
+                  class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
+                  title="Follow me on Instagram"><i class="fa fa-instagram"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <app-about></app-about>
+    <app-skill></app-skill>
+    <app-portfolio></app-portfolio>
+    <app-experience></app-experience>
+    <app-education></app-education>
+    <app-contact></app-contact>
+    
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<footer class="footer">
+  <div class="container text-center"><a class="cc-facebook btn btn-link" href="#"><i class="fa fa-facebook fa-2x "
+        aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="#"><i class="fa fa-twitter fa-2x "
+        aria-hidden="true"></i></a><a class="cc-google-plus btn btn-link" href="#"><i class="fa fa-google-plus fa-2x"
+        aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="#"><i class="fa fa-instagram fa-2x "
+        aria-hidden="true"></i></a></div>
+  <div class="h4 title text-center">Anthony Barnett</div>
+  <div class="text-center text-muted">
+    <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com"
+        target="_blank">TemplateFlip</a></p>
+  </div>
+</footer>
