@@ -2065,6 +2065,8 @@ fieldset[disabled]
   color: #2c2c2c;
 }
 
+.input-group-addon + .form-control:focus,
+.input-group-addon ~ .form-control:focus,
 .form-control:focus + .input-group-addon,
 .form-control:focus ~ .input-group-addon {
   border: 1px solid #378C3F;
@@ -7249,15 +7251,15 @@ Created using IcoMoon - icomoon.io
   color: #3b5998;
 }
 
-.cc-twitter:hover i {
+.cc-skype:hover i {
   color: #1da1f2;
 }
 
-.cc-google-plus:hover i {
-  color: #dd4b39;
+.cc-github:hover i {
+  color: #0e0d0d;
 }
 
-.cc-instagram:hover i {
+.cc-linkedin:hover i {
   color: #405de6;
 }
 

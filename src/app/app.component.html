@@ -1,6 +1,6 @@
 <header>
   <div class="profile-page sidebar-collapse">
-    <app-navbar></app-navbar>
+    <app-navbar [about]="data?.about"></app-navbar>
   </div>
 </header>
 <div class="page-content">
@@ -8,52 +8,49 @@
     <div class="profile-page">
       <div class="wrapper">
         <div class="page-header page-header-small" filter-color="green">
-          <div class="page-header-image" data-parallax="true"
-            style="background-image: url('assets/images/cc-bg-1.jpg');"></div>
+          <div class="page-header-image" data-parallax="true" [style.background]="'url(' + data?.about?.header + ')'"></div>
           <div class="container">
             <div class="content-center">
-              <div class="cc-profile-image"><a href="#"><img src="assets/images/anthony.jpg" alt="Image" /></a></div>
-              <div class="h2 title">Anthony Barnett</div>
-              <p class="category text-white">Web Developer, Graphic Designer, Photographer</p><a
-                class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
-                data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="#" data-aos="zoom-in"
-                data-aos-anchor="data-aos-anchor">Download CV</a>
+              <div class="cc-profile-image"><a href="#"><img [src]="data?.about?.profile" alt="Thach Duong" /></a></div>
+              <div class="h2 title">{{data?.about?.name}}</div>
+              <p class="category text-white">{{data?.about?.title}}</p><a class="btn btn-primary" data-aos="zoom-in"
+                data-aos-anchor="data-aos-anchor" (click)="download()">Download CV</a>
             </div>
           </div>
           <div class="section">
             <div class="container">
-              <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
+              <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" [href]="data?.about?.facebook" rel="tooltip"
                   title="Follow me on Facebook"><i class="fa fa-facebook"></i></a><a
-                  class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
-                  title="Follow me on Twitter"><i class="fa fa-twitter"></i></a><a
-                  class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
-                  title="Follow me on Google+"><i class="fa fa-google-plus"></i></a><a
-                  class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
-                  title="Follow me on Instagram"><i class="fa fa-instagram"></i></a></div>
+                  class="btn btn-default btn-round btn-lg btn-icon" target="_blank" [href]="data?.about?.git" rel="tooltip"
+                  title="Follow me on Github"><i class="fa fa-github"></i></a><a
+                  class="btn btn-default btn-round btn-lg btn-icon" [href]="sanitize(data?.about?.skype)" rel="tooltip"
+                  title="Follow me on Skype"><i class="fa fa-skype"></i></a><a
+                  class="btn btn-default btn-round btn-lg btn-icon" target="_blank" [href]="data?.about?.linkedin" rel="tooltip"
+                  title="Follow me on Linkedin"><i class="fa fa-linkedin"></i></a></div>
             </div>
           </div>
         </div>
       </div>
     </div>
     
-    <app-about></app-about>
-    <app-skill></app-skill>
-    <app-portfolio></app-portfolio>
-    <app-experience></app-experience>
-    <app-education></app-education>
-    <app-contact></app-contact>
+    <app-about [about]="data?.about"></app-about>
+    <app-skill [skills]="data?.skills"></app-skill>
+    <app-portfolio [portfolio]="data?.projects"></app-portfolio>
+    <app-experience [experience]="data?.experience"></app-experience>
+    <app-education [education]="data?.education"></app-education>
+    <app-contact [contact]="data?.about"></app-contact>
     
   </div>
 </div>
 <footer class="footer">
-  <div class="container text-center"><a class="cc-facebook btn btn-link" href="#"><i class="fa fa-facebook fa-2x "
-        aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="#"><i class="fa fa-twitter fa-2x "
-        aria-hidden="true"></i></a><a class="cc-google-plus btn btn-link" href="#"><i class="fa fa-google-plus fa-2x"
-        aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="#"><i class="fa fa-instagram fa-2x "
+  <div class="container text-center"><a class="cc-facebook btn btn-link" target="_blank" [href]="data?.about?.facebook"><i class="fa fa-facebook fa-2x "
+        aria-hidden="true"></i></a><a class="cc-github btn btn-link " target="_blank" [href]="data?.about?.git"><i class="fa fa-github fa-2x "
+        aria-hidden="true"></i></a><a class="cc-skype btn btn-link" target="_blank" [href]="sanitize(data?.about?.skype)"><i class="fa fa-skype fa-2x"
+        aria-hidden="true"></i></a><a class="cc-linkedin btn btn-link" target="_blank" [href]="data?.about?.linkedin"><i class="fa fa-linkedin fa-2x "
         aria-hidden="true"></i></a></div>
-  <div class="h4 title text-center">Anthony Barnett</div>
+  <div class="h4 title text-center">{{data?.about?.name}}</div>
   <div class="text-center text-muted">
-    <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com"
-        target="_blank">TemplateFlip</a></p>
+    <p>Inspired by - <a class="credit" href="https://www.creative-tim.com/product/now-ui-kit"
+        target="_blank">Now UI Kit</a></p>
   </div>
 </footer>
